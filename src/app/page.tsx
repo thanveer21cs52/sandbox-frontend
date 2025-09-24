@@ -6,6 +6,7 @@ import Banner3 from "../../componets/banner3";
 import Banner4 from "../../componets/banner4";
 import Banner5 from "../../componets/Banner5";
 import Banner6 from "../../componets/banner6";
+import VideoPlayer from "../../componets/videopop";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
           <Banner4/>
           <Banner5/>
           <Banner6/>
+       
        
           
   

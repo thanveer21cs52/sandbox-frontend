@@ -13,7 +13,7 @@ async function Banner5() {
           <div className="absolute w-[60%] h-[60%] rounded-full bg-bg animate-ping"></div>
           <div className="absolute w-[50%] h-[50%] rounded-full bg-bg animate-pulse"></div>
 
-          <div className="flex justify-center items-center w-14 h-14 rounded-full bg-white z-10">
+          <div className="flex justify-center items-center w-14 h-14 rounded-full bg-white z-10 cursor-pointer">
             <FontAwesomeIcon icon={faPlay} className="text-black text-lg" />
           </div>
         </div>
@@ -24,6 +24,11 @@ async function Banner5() {
           </p>
         </div>
     </div>
+  
+
+
+
+
   );
 }
 

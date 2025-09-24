@@ -6,7 +6,7 @@ async function Banner3() {
       const data=await data1.banner3[0].list
       console.log(data, "sds");
     return (
-        <div className="bg-bg text-base-text px-40   ">
+        <div className="bg-bg text-base-text px-36   ">
             <div className="grid grid-cols-3 gap-7 text-sm  pb-16 border-b border-b-purple-100">
                 {
                     data.map((dt:any,key:number)=>{

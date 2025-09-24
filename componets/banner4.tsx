@@ -7,7 +7,7 @@ async function Banner4() {
       const data=data1.banner4
       console.log(data, "sds");
     return (
-        <div className="bg-bg text-base-text px-40  grid grid-cols-2 py-8 ">
+        <div className="bg-bg text-base-text px-36  grid grid-cols-2 py-8 ">
             <div className="flex flex-col justify-start gap-4 py-14 ">
                 <p className=" text-3xl font-semibold  font-serif  w-8/10 leading-10">
             {data.title}

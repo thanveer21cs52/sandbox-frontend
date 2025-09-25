@@ -1,7 +1,7 @@
 
  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faTwitter, faInstagram, faDribbble } from "@fortawesome/free-brands-svg-icons";
-export default function Socialbar({icon}:{icon:string}) {
+import { faFacebook, faTwitter, faInstagram, faDribbble, faYoutube } from "@fortawesome/free-brands-svg-icons";
+export default function Socialbar({icon,classname=''}:{icon:string,classname:string}) {
 
 
   const socialIcons = [
@@ -9,6 +9,7 @@ export default function Socialbar({icon}:{icon:string}) {
     { name: "twitter", icon: faTwitter },
     { name: "instagram", icon: faInstagram },
     { name: "dribbble", icon: faDribbble },
+    { name: "youtube", icon: faYoutube },
   ];
   const iconname:any=socialIcons.find((icn:any)=>icn.name==icon)
   console.log(iconname)
@@ -17,7 +18,7 @@ export default function Socialbar({icon}:{icon:string}) {
   return (
     <div className="p-1">
    
-        <FontAwesomeIcon  icon={iconname?.icon} className={`hover:text-button-purple ${icon=='facebook'?'text-blue-600':icon=='twitter'?'text-sky-400':icon=='dribbble'?'text-pink-600':""} w-4 h-4 `} />
+        <FontAwesomeIcon  icon={iconname?.icon} className={`hover:text-button-purple ${classname} w-4 h-4 `} />
 
     </div>
 

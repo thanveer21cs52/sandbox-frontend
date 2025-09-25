@@ -53,11 +53,11 @@ async function Banner6() {
                         
                     </div>
                     <div className="w-full flex justify-start gap-1">
-                        <a href=""><Socialbar icon={'twitter'} /></a>
+                        <a href=""><Socialbar icon={'twitter'}classname="text-sky-400" /></a>
                         
-                        <a href=""><Socialbar icon={'facebook'} /></a>
+                        <a href=""><Socialbar icon={'facebook'} classname="text-blue-600" /></a>
 
-                      <a href=""><Socialbar icon={'dribbble'} /></a>
+                      <a href=""><Socialbar icon={'dribbble'} classname="text-pink-600"  /></a>
 
 
                     </div>

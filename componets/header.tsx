@@ -43,7 +43,7 @@ export default async function Header() {
 
             return (
               <a href="/" key={index}>
-                <Socialbar icon={value} />
+                <Socialbar icon={value} classname="" />
               </a>
             );
           }

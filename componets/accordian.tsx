@@ -7,7 +7,7 @@ import Icon from './icons'
 function Accordian({data1}:{data1:any}) {
  
     const [data,setdata]=useState<any>(null)
-     const [openIndex, setOpenIndex] = useState<number | null>(null);
+     const [openIndex, setOpenIndex] = useState<number | null>(0);
     useEffect(()=>{
         // async function fetch(){
         //      const data1 = await fetchData(`https://strapi-backend-dbhx.onrender.com/api/home?populate[banner4][populate]=*`);
@@ -37,7 +37,7 @@ function Accordian({data1}:{data1:any}) {
        
           <button
             onClick={() => handleToggle(index)}
-            className="w-full flex gap-2 items-center p-1 cursor-pointer"
+            className="w-full flex gap-2 items-center  p-1 cursor-pointer"
           >
              <span
               className={`transform transition-transform ${
@@ -58,7 +58,7 @@ function Accordian({data1}:{data1:any}) {
               openIndex === index ? "max-h-40 p-4 pt-0" : "max-h-0"
             }`}
           >
-            <p className="text-xs leading-relaxed">
+            <p className="text-xs leading-relaxed w-6/8">
               {item.value || "No content available."}
             </p>
           </div>

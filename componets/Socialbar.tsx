@@ -17,7 +17,7 @@ export default function Socialbar({icon}:{icon:string}) {
   return (
     <div className="p-1">
    
-        <FontAwesomeIcon  icon={iconname?.icon} className="hover:text-button-purple w-4 h-4 " />
+        <FontAwesomeIcon  icon={iconname?.icon} className={`hover:text-button-purple ${icon=='facebook'?'text-blue-600':icon=='twitter'?'text-sky-400':icon=='dribbble'?'text-pink-600':""} w-4 h-4 `} />
 
     </div>
 

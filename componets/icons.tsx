@@ -2,10 +2,11 @@
 
 import { fa42Group } from "@fortawesome/free-brands-svg-icons";
 import { faHome } from "@fortawesome/free-regular-svg-icons/faHome";
-import { faAngleDown, faBook, faBookSkull, faCheck, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faBook, faBookSkull, faCheck, faGlobe, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons/faArrowDown";
 import { faGear } from "@fortawesome/free-solid-svg-icons/faGear";
 import { faMessage } from "@fortawesome/free-solid-svg-icons/faMessage";
+import { faQuoteRight } from "@fortawesome/free-solid-svg-icons/faQuoteRight";
 import { faShieldBlank } from "@fortawesome/free-solid-svg-icons/faShieldBlank";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -19,7 +20,8 @@ const icons = {
  book:faBook,
  setting:faGear,
  world:faGlobe,
- downarr:faAngleDown
+ downarr:faAngleDown,
+ quote:faQuoteLeft
 };
 
 type IconProps = {

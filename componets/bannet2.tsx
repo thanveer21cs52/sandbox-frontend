@@ -7,7 +7,7 @@ async function Banner2() {
   console.log(data, "sds");
 
   return (
-    <div className=" bg-bg text-base-text px-36 pt-4 pb-4">
+    <div className=" bg-bg text-base-text px-30 pt-4 pb-4">
       <div className="flex justify-between gap-10 relative z-10">
         <div className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 
                   flex items-center justify-center flex-col rounded-full 

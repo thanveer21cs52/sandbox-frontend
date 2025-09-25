@@ -9,9 +9,9 @@ export default async function Header() {
   const data = await data1.header;
 
   return (
-    <header className="w-full bg-bg  p-2 flex items-center justify-between min-h-[10vh] md:px-34 text-base-text py-4 fixed z-30">
+    <header className="w-full bg-bg  p-2 flex items-center justify-between min-h-[10vh] md:px-28 text-base-text py-4 fixed z-30">
       <div className="p-2 ">
-        <img src={data.url} alt="logo" className="h-5 w-28 " />
+        <img src={data.url} alt="logo" className="h-5 w-28 cursor-pointer" />
       </div>
 
       <nav className="hidden md:flex items-center gap-8  text-xs md:text-sm md:font-semibold font-medium ">

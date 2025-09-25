@@ -4,19 +4,19 @@ import { fetchData } from '../utils/fetch'
 import { configDotenv } from 'dotenv'
 import Icon from './icons'
 
-function Accordian() {
+function Accordian({data1}:{data1:any}) {
  
     const [data,setdata]=useState<any>(null)
      const [openIndex, setOpenIndex] = useState<number | null>(null);
     useEffect(()=>{
-        async function fetch(){
-             const data1 = await fetchData(`https://strapi-backend-dbhx.onrender.com/api/home?populate[banner4][populate]=*`);
-             const data=data1.banner4
-             console.log(data)
-          setdata(data)
+        // async function fetch(){
+        //      const data1 = await fetchData(`https://strapi-backend-dbhx.onrender.com/api/home?populate[banner4][populate]=*`);
+        //      const data=data1.banner4
+        //      console.log(data)
+        //   setdata(data)
 
-        }
-        fetch()
+        // }
+       setdata(data1)
          
 
     },[])

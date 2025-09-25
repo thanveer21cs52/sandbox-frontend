@@ -54,6 +54,7 @@ async function Banner7() {
         <div className="grid grid-cols-6 gap-6 mx-5 my-10">
             {data.patnersimg[0].img_urls.map((img:any,index:number)=>{
                 return <img
+                key={index}
                 src={img.url}
                 alt="bannerimg"
                 className="w-[70%] h-[70%] "

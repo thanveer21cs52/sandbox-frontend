@@ -8,11 +8,11 @@ async function Banner4() {
       console.log(data, "sds");
     return (
         <div className="bg-bg text-base-text px-30  grid grid-cols-2 py-8 ">
-            <div className="flex flex-col justify-start gap-4 py-22 ">
+            <div className="flex flex-col justify-start gap-4 py-18 ">
                 <p className=" text-3xl font-semibold  font-serif  w-8/10 leading-10">
             {data.title}
           </p>
-                <Accordian/>
+                <Accordian data1={data}/>
 
             </div>
             <div>

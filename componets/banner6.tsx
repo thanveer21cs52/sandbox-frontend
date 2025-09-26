@@ -7,13 +7,13 @@ async function Banner6() {
               const data=data1.banner6
               console.log(data, "sdssdss");
     return (
-        <div className="px-30 pt-28 bg-bg flex-col flex gap-15  ">
-            <div className="flex w-full ">
-                <div className="flex-2/7 flex flex-col gap-4">
-                 <p className="font-semibold font-serif text-4xl leading-10 tracking-tight text-base-text">{data.bigtext}</p>
+        <div className="px-10 md:px-30 pt-28 bg-bg flex-col flex gap-15  ">
+            <div className="flex flex-col lg:flex-row w-full gap-3 lg:gap-0 ">
+                <div className="flex-2/7 flex flex-col gap-2 lg:gap-4 sm:items-center justify-center sm:text-center lg:text-start lg:items-start">
+                 <p className="font-semibold font-serif text-2xl  lg:text-4xl leading-10 tracking-tight text-base-text">{data.bigtext}</p>
                           <p className="text-xl text-gray-500 font-medium">{data.smalltext}</p>
                 </div>
-                <div className="flex-9/12 grid grid-cols-3 ps-15 pe-5 justify-items-end items-center  ">
+                <div className="flex-9/12 grid grid-cols-1 md:grid-cols-3 md:ps-15 md:pe-5 justify-items-center md:justify-items-end md:items-center  ">
                 {
                     data.list.map((dt:any,index:number)=>{
                         return <div className="flex flex-col items-center w-full  py-4 gap-2" key={index}>
@@ -33,7 +33,7 @@ async function Banner6() {
                 </div>
 
             </div>
-            <div className="grid grid-cols-4 justify-items-center px-2 gap-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center px-2 gap-7">
                 {data.profileslist.map((dt:any,index:number)=>{
                     return  <div className=" bg-white rounded-lg w-full  flex flex-col p-7 pt-9 pb-14 gap-4 "  style={{ boxShadow: "0 0 8px rgba(0,0,0,0.1)" }} key={index}>
                     <div className="w-full ">

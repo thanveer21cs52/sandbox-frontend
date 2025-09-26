@@ -21,8 +21,8 @@ export default function Home() {
           <Banner4/>
           <Banner5/>
           <Banner6/>
-            <Banner7/>
-            <Banner8/>
+            {/* <Banner7/> */}
+            {/* <Banner8/> */}
        
        
           

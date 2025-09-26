@@ -7,7 +7,7 @@ async function Banner5() {
           const data=data1.banner5
           console.log(data, "sds");
   return (
-    <div className=" px-40  flex flex-col  py-34 justify-center items-center gap-6 ">
+    <div className=" px-10 md:px-40  flex flex-col  py-34 justify-center items-center gap-6 ">
       <div className="">
         <div className="relative flex justify-center items-center w-20 h-20">
           <div className="absolute w-[60%] h-[60%] rounded-full bg-bg animate-ping"></div>
@@ -19,7 +19,7 @@ async function Banner5() {
         </div>
       </div>
        <div className="flex justify-center items-center">
-          <p className=" text-3xl font-semibold  font-serif  w-8/10 leading-12 text-bg text-center">
+          <p className=" md:text-3xl font-semibold  font-serif w-full  md:w-8/10 md:leading-12 text-bg text-center">
             {data.title}
           </p>
         </div>

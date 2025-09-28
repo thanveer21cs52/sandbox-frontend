@@ -97,8 +97,8 @@ async function Banner7() {
         {/* --- MAIN CONTENT --- */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
           {/* LEFT IMAGE GRID */}
-          <div className="lg:basis-1/2 grid grid-cols-2 justify-items-start content-end gap-3 sm:gap-4">
-            <div className="row-span-2 w-full flex justify-end h-full my-4 sm:my-6">
+          <div className="lg:basis-1/2 grid grid-cols-1 sm:grid-cols-2 justify-items-start content-end gap-3 sm:gap-4">
+            <div className="md:row-span-2 w-full flex justify-end h-full my-4 sm:my-6">
               <img
                 src={data.imgsurl[0].url}
                 alt="bannerimg"
@@ -106,7 +106,7 @@ async function Banner7() {
               />
             </div>
 
-            <div className="bg-purple-box w-[90%] rounded-lg flex flex-col justify-center items-center h-32 sm:h-40 md:h-44 px-2">
+            <div className="bg-purple-box w-full sm:w-[90%] rounded-lg flex flex-col justify-center items-center h-40 sm:h-40 md:h-44 px-2">
               <p className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight text-center">
                 {data.no_projects}
               </p>
@@ -115,7 +115,7 @@ async function Banner7() {
               </p>
             </div>
 
-            <div className="w-full rounded-lg flex flex-col h-32 sm:h-40 md:h-44">
+            <div className="w-full rounded-lg flex flex-col h-40 sm:h-40 md:h-44">
               <img
                 src={data.imgsurl[1].url}
                 alt="bannerimg"
@@ -125,20 +125,20 @@ async function Banner7() {
           </div>
 
       
-          <div className="lg:basis-1/2 w-full min-h-fit flex justify-center mt-6 lg:mt-0 ">
+          <div className="lg:basis-1/2 w-full min-h-fit flex justify-center lg:mt-0 ">
             <Scrollbar data={data} />
           </div>
         </div>
 
      
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-10 justify-items-center mx-2 sm:mx-5 mt-10">
+        <div className="grid  grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-10 justify-items-center mx-2 sm:mx-5 mt-10">
           {data.patnersimg[0].img_urls.map((img: any, index: number) => {
             return (
               <img
                 key={index}
                 src={img.url}
                 alt="partner"
-                className="max-w-[60%] sm:max-w-[70%] md:max-w-[80%] lg:max-w-[60%] h-auto object-contain"
+                className="max-w-[40%] sm:max-w-[50%] md:max-w-[50%] lg:max-w-[60%] h-auto object-contain"
               />
             );
           })}

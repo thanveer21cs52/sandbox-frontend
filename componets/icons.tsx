@@ -24,7 +24,7 @@ const icons = {
  quote:faQuoteLeft
 };
 
-type IconProps = {
+ type IconProps = {
   name: keyof typeof icons; 
   className?: string;
 };

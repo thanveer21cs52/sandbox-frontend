@@ -78,7 +78,7 @@ export default function Scrollbar({ data }: { data: any }) {
   return (
     <div className="flex flex-col w-full justify-center min-h-fit items-center select-none gap-2 px-4 sm:px-6 md:px-10">
       
-      <div className="flex w-full overflow-hidden h-40 sm:h-52 md:h-72 lg:h-80 xl:h-96 rounded-lg">
+      <div className="flex w-full overflow-hidden h-52 sm:h-52 md:h-72 lg:h-80 xl:h-96 rounded-lg">
         <div
           ref={sliderRef}
           className="flex w-full flex-nowrap"

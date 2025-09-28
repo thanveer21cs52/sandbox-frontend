@@ -9,11 +9,13 @@ import Banner6 from "../../componets/banner6";
 import VideoPlayer from "../../componets/videopop";
 import Banner7 from "../../componets/banner7";
 import Banner8 from "../../componets/Banner8";
+import Socialbar from "../../componets/Socialbar";
 
 
 export default function Home() {
+  
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen scroll-smooth">
       
       <Banner1/>
       <Banner2/>
@@ -21,13 +23,14 @@ export default function Home() {
           <Banner4/>
           <Banner5/>
           <Banner6/>
-            {/* <Banner7/> */}
-            {/* <Banner8/> */}
+            <Banner7/>
+            <Banner8/>
+            
+                </div>
        
        
           
   
-    
-    </div>
+
   );
 }

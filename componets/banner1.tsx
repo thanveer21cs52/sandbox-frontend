@@ -65,7 +65,7 @@ async function Banner1() {
           </div>
         </div>
 
-       <div className="lg:w-1/2 w-full h-[42vh] sm:h-[50vw] md:h-[40vh] lg:h-[40vw] xl:h-[30vw] flex justify-center md:justify-end md:px-0 rounded-sm md:rounded-s-4xl lg:rounded-s-4xl ">
+       <div className="lg:w-1/2 w-full h-[42vh] sm:h-[50vw] md:h-[40vh] lg:h-[35vw] xl:h-[30vw] flex justify-center md:justify-end md:px-0 rounded-sm md:rounded-s-4xl lg:rounded-s-4xl ">
   <img
     src={data.url}
     alt="bannerimg"

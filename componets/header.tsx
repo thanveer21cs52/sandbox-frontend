@@ -14,7 +14,7 @@ export default async function Header() {
   const data = await data1.header;
 
   return (
-    <header className={`sticky top-0 left-0 w-full bg-bg z-30 `}>
+    <header className={`sticky top-0 left-0 w-full bg-bg z-30 font-manrope `}>
       <div className="flex items-center justify-between px-4 sm:px-8 md:px-14 lg:px-24 max-h-[75px] py-3">
         {/* Logo */}
         <div className="p-2">

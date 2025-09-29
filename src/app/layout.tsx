@@ -39,7 +39,7 @@ export default async function ResponsiveRootLayout({
         className={`
           ${geistSans.variable} 
           ${geistMono.variable} 
-          antialiased 
+          font-manrope
           min-h-screen 
           w-full
           m-0 

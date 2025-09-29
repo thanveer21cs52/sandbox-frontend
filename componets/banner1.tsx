@@ -49,7 +49,7 @@ async function Banner1() {
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start gap-2 lg:gap-8 md:gap-4 ">
     
         <div className="flex flex-col justify-center py-5 lg:py-8 items-center lg:justify-start lg:items-start gap-5 text-dark-base px-10 md:px-3  sm:px:18 lg:px-24 xl:px-24 lg:w-1/2 text-start">
-          <p className="text-xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold font-serif leading-8 text-center lg:text-start sm:leading-10 md:leading-8 lg:leading-10 w-full  ">
+          <p className="text-xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold  leading-8 text-center lg:text-start sm:leading-10 md:leading-8 lg:leading-10 w-full  ">
             {data.maintext}
           </p>
           <p className="text-sm sm:text-lg md:text-lg lg:text-xl w-full text-center lg:text-start lg:w-4/6 text-light-base font-medium">

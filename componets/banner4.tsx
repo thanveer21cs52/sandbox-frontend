@@ -9,7 +9,7 @@ async function Banner4() {
     return (
         <div className="bg-bg text-base-text px-10 md:px-30 flex flex-col-reverse md:grid md:grid-cols-2 py-8 ">
             <div className="flex flex-col justify-start gap-4 md:py-18 min-h-[60vh] md:min-h-0 ">
-                <p className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-semibold  font-serif  w-8/10 leading-10">
+                <p className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-semibold    w-8/10 leading-10">
             {data.title}
           </p>
                 <Accordian data1={data}/>

@@ -10,7 +10,7 @@ async function Banner6() {
         <div className="px-10 md:px-30 pt-28 bg-bg flex-col flex gap-15  ">
             <div className="flex flex-col lg:flex-row w-full gap-3 lg:gap-0 ">
                 <div className="flex-2/7 flex flex-col gap-2 lg:gap-4 sm:items-center justify-center sm:text-center lg:text-start lg:items-start">
-                 <p className="font-semibold font-serif text-2xl  lg:text-4xl leading-10 tracking-tight text-base-text">{data.bigtext}</p>
+                 <p className="font-semibold text-2xl  lg:text-4xl leading-10 tracking-tight text-base-text">{data.bigtext}</p>
                           <p className="text-xl text-gray-500 font-medium">{data.smalltext}</p>
                 </div>
                 <div className="flex-9/12 grid grid-cols-1 md:grid-cols-3 md:ps-15 md:pe-5 justify-items-center md:justify-items-end md:items-center  ">
@@ -19,7 +19,7 @@ async function Banner6() {
                         return <div className="flex flex-col items-center w-full  py-4 gap-2" key={index}>
                     <Icon name={index==0?'world':index==1?'shield':index==2?'book':'book'} className="text-4xl  text-button-purple w-full h-full p-0 m-0"/>
                     
-                     <p className="  text-2xl   font-semibold text-base-text font-serif">{dt.no}</p>
+                     <p className="  text-2xl   font-semibold text-base-text ">{dt.no}</p>
                           <p className="text-lg text-gray-500">{dt.text}</p>
 
 

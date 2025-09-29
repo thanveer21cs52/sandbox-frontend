@@ -13,7 +13,7 @@ async function Banner2() {
                   sm:flex items-center justify-center flex-col rounded-full 
                   w-32 h-32 sm:w-36 sm:h-36 md:w-36  md:h-36 
                   bg-button-purple text-bg shadow-lg">
-    <p className="text-3xl sm:text-4xl md:text-4xl font-serif font-medium">
+    <p className="text-3xl sm:text-4xl md:text-4xl font-medium">
       {data.years}
     </p>
     <p className="text-sm sm:text-sm">{data.experince}</p>
@@ -36,7 +36,7 @@ async function Banner2() {
           
         </div>
         <div className="flex-5/10 gap-5 flex flex-col justify-center px-2 sm:p-0 ">
-          <p className="text-xl lg:text-2xl font-semibold  font-serif  w-8/9 leading-8">
+          <p className="text-xl lg:text-2xl font-semibold  font-manrope  w-8/9 leading-8">
             {data.bigtext}
           </p>
           <p className="text-xs  font-medium text-gray-500">

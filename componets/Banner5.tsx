@@ -19,7 +19,7 @@ async function Banner5() {
         </div>
       </div>
        <div className="flex justify-center items-center">
-          <p className=" md:text-3xl font-semibold  font-serif w-full  md:w-8/10 md:leading-12 text-bg text-center">
+          <p className=" md:text-3xl font-semibold   w-full  md:w-8/10 md:leading-12 text-bg text-center">
             {data.title}
           </p>
         </div>

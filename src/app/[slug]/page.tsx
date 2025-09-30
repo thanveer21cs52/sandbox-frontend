@@ -1,26 +1,20 @@
-import Banner2 from "../../../componets/services/banner2";
-import Banner1 from "../../../componets/services/banner1";
-import Banner3 from "../../../componets/services/Banner3";
-import Banner4 from "../../../componets/services/banner4";
-import Banner5 from "../../../componets/services/Banner5";
-import Banner6 from "../../../componets/services/Banner6";
-import Banner7 from "../../../componets/services/Banner7";
-import Banner8 from "../../../componets/services/Banner8";
+import { notFound } from "next/navigation";
+import Service from "../../../componets/services/service";
 
-function page() {
-    return (
-        <div className="font-manrope">
-            <Banner1/>
-            <Banner2/>
-            <Banner4/>
-            <Banner5/>
-            <Banner6/>
-            <Banner8/>
-            <Banner7/>
-            
-            
-        </div>
-    );
+async function Page({ params }:{params:any}) {
+    const slug=(await params).slug
+    if(slug=='services'){
+          return <Service />;
+
+    }
+    return notFound()
+
 }
 
-export default page;
+export default Page;
+
+export async function generateStaticParams() {
+  return [
+    { slug: "services" },
+  ];
+}

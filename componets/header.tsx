@@ -1,6 +1,7 @@
 import {  headers } from "next/headers";
 import { fetchData } from "../utils/fetch";
 import Socialbar from "./Socialbar";
+import Link from "next/link";
 
 
 export default async function Header() {
@@ -17,18 +18,18 @@ export default async function Header() {
     <header className={`sticky top-0 left-0 w-full bg-bg z-30 font-manrope `}>
       <div className="flex items-center justify-between px-4 sm:px-8 md:px-14 lg:px-24 max-h-[75px] py-3">
         {/* Logo */}
-        <div className="p-2">
+        <a className="p-2" href="/">
           <img
             src={data.url}
             alt="logo"
             className="h-[5vw] sm:h-6 md:h-7 lg:h-8 w-auto cursor-pointer object-contain"
           />
-        </div>
+        </a>
 
         <nav className="hidden lg:flex items-center gap-6 text-xs sm:text-sm md:text-base font-medium md:font-semibold">
           {[1, 2, 3, 4, 5, 6].map((i) => (
             <div key={i} className="hover:text-button-purple transition-colors">
-              <a href="/">{data.nav[0][`content${i}`]}</a>
+              <Link href="/services">{data.nav[0][`content${i}`]}</Link>
             </div>
           ))}
         </nav>

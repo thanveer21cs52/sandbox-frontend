@@ -1,6 +1,6 @@
-import { fetchData } from "../utils/fetch";
-import Icon from "./icons";
-import Socialbar from "./Socialbar";
+import { fetchData } from "../../utils/fetch";
+import Icon from "../resuse/icons";
+import Socialbar from "../resuse/Socialbar";
 
 async function Banner6() {
         const data1 = await fetchData(`https://strapi-backend-dbhx.onrender.com/api/home?populate[banner6][populate]=*`);

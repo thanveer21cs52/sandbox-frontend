@@ -1,5 +1,5 @@
-import { fetchData } from "../utils/fetch";
-import Socialbar from "./Socialbar";
+import { fetchData } from "../../utils/fetch";
+import Socialbar from "../resuse/Socialbar";
 
 async function Banner8() {
   const data1 = await fetchData(

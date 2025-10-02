@@ -76,20 +76,20 @@ export default function Scrollbar({ data }: { data: any }) {
   }, [currentIndex]);
 
   return (
-    <div className="flex flex-col w-full justify-center min-h-fit items-center select-none gap-2 px-4 sm:px-6 md:px-10">
+    <div className="flex flex-col w-full justify-center min-h-fit items-center select-none gap-2 ">
       
       <div className="flex w-full overflow-hidden h-52 sm:h-52 md:h-72 lg:h-80 xl:h-96 rounded-lg">
         <div
           ref={sliderRef}
           className="flex w-full flex-nowrap"
         >
-          {data.scroll_list.map((item: any, i: number) => (
+          {data.map((item: any, i: number) => (
             <div
               key={i}
               className="flex-none w-full flex flex-col justify-center items-center gap-3 sm:gap-4 md:gap-5 px-2 sm:px-4 md:px-6"
             >
               <Icon name="quote" className="text-2xl sm:text-3xl md:text-4xl text-gray-200" />
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl w-full text-light-base text-center leading-relaxed">
+              <p className="text-base sm:text-md md:text-lg lg:text-xl w-full text-light-base text-center leading-relaxed">
                 "{item.quote}"
               </p>
               <div className="w-full flex flex-col justify-center items-center gap-1 sm:gap-2">
@@ -104,7 +104,7 @@ export default function Scrollbar({ data }: { data: any }) {
       </div>
 
       <div className="flex gap-2 sm:gap-3 mt-3 sm:mt-4">
-        {data.scroll_list.map((_: any, i: number) => (
+        {data.map((_: any, i: number) => (
           <button key={i} onClick={() => setCurrentIndex(i)}>
             {currentIndex !== i ? (
               <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all bg-gray-300"></div>

@@ -70,9 +70,9 @@
 // export default Banner7;
 
 
-import { fetchData } from "../utils/fetch";
-import Icon from "./icons";
-import Scrollbar from "./Scrollbar";
+import { fetchData } from "../../utils/fetch";
+import Icon from "../resuse/icons";
+import Scrollbar from "../resuse/Scrollbar";
 
 async function Banner7() {
   const data1 = await fetchData(
@@ -126,7 +126,7 @@ async function Banner7() {
 
       
           <div className="lg:basis-1/2 w-full min-h-fit flex justify-center lg:mt-0 ">
-            <Scrollbar data={data} />
+            <Scrollbar data={data.scroll_list} />
           </div>
         </div>
 

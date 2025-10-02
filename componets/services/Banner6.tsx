@@ -1,5 +1,5 @@
 import { fetchData } from "../../utils/fetch";
-import Icon from "../icons";
+import Icon from "../resuse/icons";
 
 async function Banner6() {
    const data1 = await fetchData(

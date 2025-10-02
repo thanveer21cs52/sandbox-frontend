@@ -1,5 +1,5 @@
 import { fetchData } from "../../utils/fetch";
-import Progressbar from "../Progressbar";
+import Progressbar from "../resuse/Progressbar";
 
 async function Banner4() {
       const data1 = await fetchData(
@@ -28,17 +28,7 @@ async function Banner4() {
           classname:colorMap[dt.color],percentageincss:dt.percentage,percentage:dt.percentageinno
         }} key={i}/>
         })}
-        
-           {/* <Progressbar progressbardata={{title:"Strategy",
-          classname:'bg-orange-400',percentageincss:'80%'
-        }}/>
-           <Progressbar progressbardata={{title:"Development",
-         classname:'bg-red-400',percentageincss:'85%'
-        }}/>
-           <Progressbar progressbardata={{title:"Data Analysis",
-         classname:'bg-green-400' ,percentageincss:'90%'
-        }}/> */}
-        
+    
       </div>
     </div>
   );

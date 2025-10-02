@@ -1,6 +1,6 @@
 import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fetchData } from "../utils/fetch";
+import { fetchData } from "../../utils/fetch";
 
 async function Banner5() {
           const data1 = await fetchData(`https://strapi-backend-dbhx.onrender.com/api/home?populate[banner5][populate]=*`);

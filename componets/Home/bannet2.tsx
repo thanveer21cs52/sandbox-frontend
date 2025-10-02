@@ -1,5 +1,5 @@
-import { fetchData } from "../utils/fetch";
-import Icon from "./icons";
+import { fetchData } from "../../utils/fetch";
+import Icon from "../resuse/icons";
 
 async function Banner2() {
   const data1 = await fetchData('https://strapi-backend-dbhx.onrender.com/api/home?populate[banner2][populate]=*');

@@ -1,5 +1,5 @@
 import { fetchData } from "../../utils/fetch";
-import Socialbar from "../Socialbar";
+import Socialbar from "../resuse/Socialbar";
 
 async function Banner7() {
     const data1 = await fetchData(
@@ -85,14 +85,14 @@ async function Banner7() {
                     </p>
 
                 </div>
-                <div className="flex flex-col justify-start items-start gap-2 w-3/4">
+                <div className="flex flex-col justify-start items-start sm:col-span-3 lg:col-span-1 gap-2 w-3/4">
                     <p className="text-xl font-semibold ">Our Newsletter</p>
                     <p className="text-sm  text-gray-300 ">
                         Subscribe to our newsletter to get our news & deals delivered to you.
                     </p>
-                      <div className="text-sm  text-gray-300 min-w-fit border border-gray-300 flex rounded-sm">
-                        <input type="text" name="" id="" className="py-2 ps-1 focus:outline-0 flex-2/5"  placeholder="Email Addess "/>
-                        <button className="bg-blue-600  rounded-r-sm text-medium text-white flex-2/5 px-2" type="submit">Join</button>
+                      <div className="text-sm  text-gray-300 min-w-fit sm:w-full border border-gray-300 flex rounded-sm">
+                        <input type="text" name="" id="" className="py-2 ps-1 focus:outline-0 flex-2/5 sm:flex-4/5 lg:flex-2/5"  placeholder="Email Addess "/>
+                        <button className="bg-blue-600  rounded-r-sm text-medium text-white flex-2/5 sm:flex-1/5 lg:flex-2/5 px-2" type="submit">Join</button>
                         
                     </div>
 

@@ -1,6 +1,6 @@
-import { fetchData } from "../utils/fetch";
-import Accordian from "./accordian";
-import Icon from "./icons";
+import { fetchData } from "../../utils/fetch";
+import Accordian from "../resuse/accordian";
+import Icon from "../resuse/icons";
 
 async function Banner4() {
       const data1 = await fetchData(`https://strapi-backend-dbhx.onrender.com/api/home?populate[banner4][populate]=*`);
@@ -12,7 +12,7 @@ async function Banner4() {
                 <p className="text-xl sm:text-lg md:text-2xl lg:text-3xl font-semibold    w-8/10 leading-10">
             {data.title}
           </p>
-                <Accordian data1={data}/>
+                <Accordian data1={data.dropdown} className={'purple'}/>
 
             </div>
             <div>

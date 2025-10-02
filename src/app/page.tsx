@@ -1,15 +1,15 @@
 import Image from "next/image";
-import Header from "../../componets/header";
-import Banner1 from "../../componets/banner1";
-import Banner2 from "../../componets/bannet2";
-import Banner3 from "../../componets/banner3";
-import Banner4 from "../../componets/banner4";
-import Banner5 from "../../componets/Banner5";
-import Banner6 from "../../componets/banner6";
-import VideoPlayer from "../../componets/videopop";
-import Banner7 from "../../componets/banner7";
-import Banner8 from "../../componets/Banner8";
-import Socialbar from "../../componets/Socialbar";
+import Header from "../../componets/resuse/header";
+import Banner1 from "../../componets/Home/banner1";
+import Banner2 from "../../componets/Home/bannet2";
+import Banner3 from "../../componets/Home/banner3";
+import Banner4 from "../../componets/Home/banner4";
+import Banner5 from "../../componets/Home/Banner5";
+import Banner6 from "../../componets/Home/banner6";
+import VideoPlayer from "../../componets/resuse/videopop";
+import Banner7 from "../../componets/Home/banner7";
+import Banner8 from "../../componets/Home/Banner8";
+import Socialbar from "../../componets/resuse/Socialbar";
 
 
 export default function Home() {

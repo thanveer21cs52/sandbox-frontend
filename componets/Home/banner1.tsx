@@ -35,7 +35,7 @@
 // export default Banner1;
 
 
-import { fetchData } from "../utils/fetch";
+import { fetchData } from "../../utils/fetch";
 
 async function Banner1() {
   const data1 = await fetchData(

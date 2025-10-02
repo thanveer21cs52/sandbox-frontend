@@ -1,6 +1,6 @@
 import { fetchData } from "../../utils/fetch";
-import Icon from "../icons";
-import Progressbar from "../Progressbar";
+import Icon from "../resuse/icons";
+import Progressbar from "../resuse/Progressbar";
    const data1 = await fetchData(
           `https://strapi-backend-dbhx.onrender.com/api/service?populate[servicebanner5][populate]=*`
       );

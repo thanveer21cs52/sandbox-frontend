@@ -1,8 +1,8 @@
 
 
-import Icon from "../icons";
-import Ticklist from "../ticklist";
-import Pricing from "../Pricing";
+import Icon from "../resuse/icons";
+import Ticklist from "../resuse/ticklist";
+import Pricing from "../resuse/Pricing";
 import { fetchData } from "../../utils/fetch";
 
 async function Banner8() {

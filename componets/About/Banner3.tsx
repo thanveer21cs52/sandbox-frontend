@@ -1,17 +1,22 @@
 import { fetchData } from "../../utils/fetch";
-import Icon from "../resuse/icons";
+import Progressbar from "../resuse/Progressbar";
 
 async function Banner3() {
     const data1 = await fetchData(
+        `https://strapi-backend-dbhx.onrender.com/api/aboutpage?populate[aboutbanner3][populate]=*`
+    );
+    console.log(data1.aboutbanner3, "sd");
+    const data = data1.aboutbanner3;
+    const data2 = await fetchData(
         `https://strapi-backend-dbhx.onrender.com/api/service?populate[servicebanner3][populate]=*`
     );
-    console.log(data1.servicebanner3, "sd");
-    const data = data1.servicebanner3;
+    console.log(data2.servicebanner3, "sd");
+    const data3 = data2.servicebanner3;
     const svgs = [
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 321.7 409.6"
-            className="w-14 h-14 mb-3"
+            className="w-9 h-9 mb-3"
             fill="none"
         >
             {/* Top bulb section */}
@@ -56,35 +61,28 @@ async function Banner3() {
         </svg>
         ,
         <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 427.5"
-            className="w-12 h-12 text-red-300 mb-3"
-            fill="none"
-        >
-            {/* Filled parts */}
-            <path
-                className="fill-red-300"
-                d="M186.9 353.4h138.3V413H186.9z"
-            />
-            <path
-                className="fill-red-300"
-                d="M220.1 271.6c-12.7-19.8-6.9-46.3 12.9-59s46.3-6.9 59 12.9c9 14 9 32 0 46.1h100.6v-50.3l-30.4-4.9c-4.9-16.3-13.6-31.3-25.3-43.7l11-28.7-47.3-27.3-19.4 23.8c-16.6-3.9-33.9-3.9-50.5 0l-19.4-23.8-47.2 27.3 11 28.7c-11.7 12.4-20.3 27.4-25.3 43.7l-30.3 4.9v50.3h100.6z"
-            />
-
-            {/* Stroked parts */}
-            <path
-                className="fill-black"
-                d="M460.2 0H51.8C23.2 0 0 23.2 0 51.7v264.4c0 28.6 23.2 51.7 51.8 51.8h120.6v30.7h-28.8c-8 0-14.5 6.5-14.5 14.5s6.5 14.5 14.5 14.5h224.9c8 0 14.5-6.5 14.5-14.5s-6.5-14.5-14.5-14.5h-28.8v-41.9c.3-1.2.4-2.4.4-3.6-.2-8-6.9-14.3-14.8-14.1H51.8C39.2 339 29 328.8 29 316.2V51.7c0-12.6 10.2-22.8 22.8-22.8h408.5c12.6 0 22.8 10.2 22.8 22.8v264.4c0 12.6-10.2 22.8-22.8 22.8h-46.7c-8 .2-14.3 6.9-14.1 14.8.2 8 6.9 14.3 14.8 14.1h45.9c28.6 0 51.7-23.2 51.8-51.7V51.7C512 23.2 488.8 0 460.2 0zM310.7 367.9v30.7H201.3v-30.7h109.4z"
-            />
-            <path
-                className="fill-black"
-                d="M392.5 286.1H291.9c-8 0-14.5-6.5-14.5-14.5 0-2.8.8-5.5 2.3-7.8 8.4-13.1 4.6-30.6-8.6-39-13.1-8.4-30.6-4.6-39 8.6-5.9 9.3-5.9 21.1 0 30.4 4.3 6.7 2.4 15.7-4.3 20-2.3 1.5-5.1 2.3-7.8 2.3H119.4c-8 0-14.5-6.5-14.4-14.5v-50.3c0-7.1 5.2-13.1 12.2-14.3l21.8-3.5c4.7-12.2 11.3-23.6 19.5-33.7l-7.9-20.6c-2.5-6.6.1-14.1 6.3-17.7l47.3-27.3c6.2-3.5 14-2.1 18.5 3.4l13.9 17.1c12.9-2 26.1-2 39 0l13.9-17.1c4.5-5.5 12.3-7 18.5-3.4l47.3 27.3c6.2 3.6 8.8 11.1 6.3 17.7l-7.9 20.6c8.2 10.2 14.7 21.5 19.4 33.7l21.8 3.5c7 1.1 12.2 7.2 12.2 14.3v50.3c-.1 8-6.6 14.5-14.6 14.5zm-80-29h65.6v-23.5l-18.2-2.9c-5.5-.9-10-4.8-11.6-10.1-4.3-14.2-11.9-27.2-22-38-3.8-4-5-9.9-3-15.1l6.6-17.2-25.9-15-11.6 14.3c-3.5 4.3-9.1 6.2-14.5 5-14.5-3.3-29.5-3.3-43.9 0-5.4 1.2-11-.7-14.5-5l-11.6-14.3-25.9 15 6.6 17.2c2 5.2.8 11-3 15.1-10.1 10.8-17.7 23.8-22 38-1.6 5.3-6.1 9.2-11.6 10.1l-18.2 2.9v23.5h65.6c-.4-2.8-.6-5.7-.6-8.6.4-31.6 26.3-56.8 57.9-56.4 31 .4 56 25.4 56.4 56.4 0 2.9-.2 5.8-.6 8.6z"
-            />
-        </svg>,
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 408.1 409.6"
+      className="w-9 h-9 text-green-500/30"
+      fill="currentColor"
+    >
+      <path
+          className="fill-black"
+        d="M396.3 192.3h-33.4c-6.4 0-11.6-5.2-11.6-11.6 0-6.4 5.2-11.6 11.6-11.6h19.7C363.2 71.1 268.1 7.3 170.1 26.6c-4.2.8-8.4 1.8-12.6 2.9L235.1 169h72c6.4 0 11.6 5.2 11.6 11.6 0 6.4-5.2 11.6-11.6 11.6h-78.9c-4.2 0-8.1-2.3-10.1-6l-87.9-158c-3.1-5.6-1.1-12.6 4.5-15.7.7-.4 1.5-.7 2.3-1l8.1-2.5c107.8-33.1 222 27.4 255.1 135.2 2.7 8.7 4.8 17.6 6.3 26.6l1.3 8c1.1 6.3-3.2 12.3-9.5 13.3-.7.2-1.3.2-2 .2zM204.6 409.6c-20.4-.1-40.6-3.2-60.1-9.2l-8.1-2.5c-6.1-1.9-9.6-8.4-7.7-14.5.2-.8.6-1.5 1-2.2l88.4-158.3c2.1-3.7 5.9-5.9 10.1-5.9h33.2c6.4.2 11.4 5.5 11.2 11.9-.2 6.1-5.1 11.1-11.2 11.2H235l-78 139.8c96.8 26.3 196.6-30.9 222.9-127.8 1.1-4 2-8 2.8-12h-65.4c-6.4.2-11.7-4.8-11.9-11.2-.2-6.4 4.8-11.7 11.2-11.9h79.8c6.4 0 11.6 5.2 11.6 11.6 0 .6-.1 1.3-.2 1.9l-1.3 7.9C390 337 304.7 409.4 204.6 409.6z"
+      />
+      <path
+        className="lineal-fill"
+        d="M93 361.8C6 300.1-14.5 179.6 47.1 92.6c12.7-17.9 28.4-33.5 46.3-46.2l6.2-4.4 90 161.7-90.4 162.5-6.2-4.4z"
+      />
+      <path
+        className="fill-black"
+        d="M99.2 377.8c-2.4 0-4.7-.7-6.7-2.1l-6.2-4.4C-5.9 305.9-27.7 178.2 37.7 86c13.5-19 30-35.5 49.1-48.9l6.2-4.4c5.2-3.7 12.4-2.4 16.1 2.8.2.3.5.7.7 1.1l90 161.7c1.9 3.5 1.9 7.8 0 11.3L109.4 372c-1.6 2.9-4.3 4.9-7.6 5.7-.8 0-1.7.1-2.6.1zM95.8 59C15.6 119.1-.7 232.9 59.4 313.1c10.2 13.7 22.4 25.8 36 36.1l81-145.4L95.8 59z"
+      />
+    </svg>,
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 409.6 332.7"
-            className="w-12 h-12 text-black mb-3"
+            className="w-9 h-9 text-black mb-3"
             fill="none"
         >
 
@@ -115,15 +113,15 @@ async function Banner3() {
 
 
             <path
-                className="fill-current text-green-600"
+               className="fill-current text-orange-300"
                 d="M220 74.7h-30.4c-9.1 0-16.5-7.4-16.5-16.5V27.7c0-9.1 7.4-16.5 16.5-16.5H220c9.1 0 16.5 7.4 16.5 16.5v30.5c0 9.1-7.4 16.5-16.5 16.5z"
             />
             <path
-                className="fill-current text-green-600"
+                className="fill-current text-orange-300"
                 d="M381.9 275.4h-30.5c-9.1 0-16.5-7.4-16.5-16.5v-30.5c0-9.1 7.4-16.5 16.5-16.5h30.5c9.1 0 16.5 7.4 16.5 16.5v30.5c0 9.1-7.4 16.5-16.5 16.5z"
             />
             <path
-                className="fill-current text-green-600"
+                className="fill-current text-orange-300"
                 d="M58.2 275.4H27.7c-9.1 0-16.5-7.4-16.5-16.5v-30.5c0-9.1 7.4-16.5 16.5-16.5h30.5c9.1 0 16.5 7.4 16.5 16.5V259c0 9.1-7.4 16.5-16.5 16.4z"
             />
         </svg>
@@ -131,34 +129,64 @@ async function Banner3() {
 
 
     ]
-
-
-
+    const colorMap: Record<string, string> = {
+        red: "bg-red-400",
+        blue: "bg-blue-400",
+        green: "bg-green-400",
+        orange: "bg-orange-400",
+    }
     return (
+        <div className="flex flex-col lg:flex-row bg-gray-100 gap-14 md:gap-6 px-[5%]  pt-[5%]">
+            <div className="flex-2/4 md:justify-center">
+                <img src={"https://sandbox.elemisthemes.com/assets/img/illustrations/i3@2x.png"} alt="" className=" w-full h-full" />
+            </div>
 
-        <div className="   w-full ">
-            <div className="flex flex-col  ">
-                <div className="  flex-col justify-center items-center w-full p-10 pb-44   gap-10 text-dark-base text-center bg-bg min-h-60 hidden lg:flex"></div>
-                <div className="w-full bg-blue-100 relative h-[250px] sm:min-h-[400px] lg:min-h-[350px]">
-                <video src={data.banner3video.url} className="w-[80%] h-[200px] sm:h-[350px] lg:h-[450px] lg:w-[70vw] rounded-xl  z-10 absolute top-2/12  lg:-top-1/3 left-1/10 lg:left-1/7 object-cover" controls></video>
-                </div>
-                <div className="flex  flex-col justify-center items-center gap-5 text-dark-base bg-blue-100 lg:px-24 py-20  px-10  md:px-28 ">
-                    <p className="text-xl text-gray-500 font-bold ">
-                        {data.smalltitle}
-                    </p>
-                    <p className="text-2xl lg:text-4xl font-bold text-center  ">
-                        {data.title}
-                    </p>
-                    <div className="text-lg   font-medium grid grid-cols-1 sm:grid-cols-3 gap-1  text-gray-500 ">
-                        {data.json.map((dt: any, i: number) => {
+            <div className="flex  flex-col justify-start items-start  flex-2/4   gap-5 text-dark-base  px-4 ">
+                <p className="text-sm font-bold  text-blue-500">
+                    - {data.bluetext}
+                </p>
+                <p className="text-2xl lg:text-3xl font-bold  ">
+                {data.title}
+                </p>
+                <div className="text-lg   font-medium grid grid-cols-1   text-gray-500 ">
+                    {/* {data3.json.map((dt: any, i: number) => {
                             return <div className="flex flex-col items-center w-full  py-4 gap-2 text-center" key={i}>
                                 {svgs[i]}
                                 <p className="  text-xl   font-semibold text-black ">{dt.title}</p>
                                 <p className="text-sm text-gray-500  md:w-5/8">{dt.text}</p>
                             </div>
-                        })}
+                        })} */}
+
+
+           
+
+                        {
+                            data.list.map(((dt: any, i: number) => {
+                                return  <div className="flex flex-row w-full  py-4 gap-2  justify-center items-start" key={i}>
+                        <div>
+                            {svgs[i]}
+                        </div>
+                        <div>
+                            <p className="  text-md   font-semibold text-black ">{dt.title}</p>
+                            <p className="text-sm text-gray-500  ">{dt.text}</p>
+
+                        </div>
+
+
                     </div>
+
+
+                            }))
+                        }
+                       
+
+
+          
+                    
+                
                 </div>
+
+
             </div>
         </div>
     );

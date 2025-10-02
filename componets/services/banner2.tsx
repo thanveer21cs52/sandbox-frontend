@@ -1,7 +1,7 @@
 import { fetchData } from "../../utils/fetch";
-import Dotrow from "../dotrow";
-import Icon from "../icons";
-import Reusecard from "../reusecard";
+import Dotrow from "../resuse/dotrow";
+import Icon from "../resuse/icons";
+import Reusecard from "../resuse/reusecard";
 
 async function Banner2() {
     const data1 = await fetchData(

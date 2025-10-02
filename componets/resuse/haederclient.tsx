@@ -219,7 +219,7 @@ export default function HeaderClient({ logoUrl, nav, social }: HeaderClientProps
                      <Link
             key={i}
             href={`/`}
-            className="text-black hover:text-button-purple transition-colors flex gap-2 justify-center items-center"
+            className="text-white text-lg flex justify-between items-center hover:text-button-purple transition-colors"
             
           >
             <p>

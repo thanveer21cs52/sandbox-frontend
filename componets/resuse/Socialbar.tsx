@@ -1,6 +1,6 @@
 
  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faTwitter, faInstagram, faDribbble, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter, faInstagram, faDribbble, faYoutube, faGoogle } from "@fortawesome/free-brands-svg-icons";
 export default function Socialbar({icon,classname=''}:{icon:string,classname:string}) {
 
 
@@ -10,6 +10,7 @@ export default function Socialbar({icon,classname=''}:{icon:string,classname:str
     { name: "instagram", icon: faInstagram },
     { name: "dribbble", icon: faDribbble },
     { name: "youtube", icon: faYoutube },
+    {name:"google",icon:faGoogle}
   ];
   const iconname:any=socialIcons.find((icn:any)=>icn.name==icon)
   console.log(iconname)

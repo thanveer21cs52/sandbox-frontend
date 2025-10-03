@@ -29,7 +29,6 @@ export default function HeaderClient({ logoUrl, nav, social }: HeaderClientProps
         </a>
 
         {/* Desktop Nav */}
-{/* Desktop Nav */}
 <nav className="hidden lg:flex items-center gap-6 text-xs sm:text-sm md:text-base font-medium md:font-semibold">
     {nav.map((item, i) => {
         if(i==0){
@@ -65,11 +64,32 @@ export default function HeaderClient({ logoUrl, nav, social }: HeaderClientProps
                     Services
                   </Link>
                   <Link
+                    href="/contact"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={() => setOpenDropdown(null)}
+                  >
+                    contact
+                  </Link>
+                      <Link
                     href="/"
                     className="block px-4 py-2 hover:bg-gray-100"
                     onClick={() => setOpenDropdown(null)}
                   >
-                    Team
+                    home
+                  </Link>
+                   <Link
+                    href="/signin"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={() => setOpenDropdown(null)}
+                  >
+                    sign in
+                  </Link>
+                     <Link
+                    href="/signup"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={() => setOpenDropdown(null)}
+                  >
+                    sign up
                   </Link>
                 </div>
               )}
@@ -202,13 +222,34 @@ export default function HeaderClient({ logoUrl, nav, social }: HeaderClientProps
                                 >
                                   services
                                 </Link>
-                                <Link
-                                  href="/"
-                                  className="text-white hover:text-button-purple"
+<Link
+                    href="/contact"
+                  className="text-white hover:text-button-purple"
                                   onClick={() => setIsOpen(false)}
-                                >
-                                  Team
-                                </Link>
+                  >
+                    contact
+                  </Link>
+                      <Link
+                    href="/"
+                   className="text-white hover:text-button-purple"
+                                  onClick={() => setIsOpen(false)}
+                  >
+                    home
+                  </Link>
+                   <Link
+                    href="/signin"
+                   className="text-white hover:text-button-purple"
+                                  onClick={() => setIsOpen(false)}
+                  >
+                    sign in
+                  </Link>
+                     <Link
+                    href="/signup"
+                   className="text-white hover:text-button-purple"
+                                  onClick={() => setIsOpen(false)}
+                  >
+                    sign up
+                  </Link>
                               </div>
                             )}
                           </div>

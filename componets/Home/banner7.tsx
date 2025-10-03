@@ -84,7 +84,7 @@ async function Banner7() {
   return (
     <div className="bg-bg text-base-text px-4 sm:px-6 lg:px-20 pt-16 sm:pt-20 lg:pt-28 pb-12 sm:pb-16 lg:pb-24">
       <div className="flex flex-col gap-8 sm:gap-12">
-        {/* --- HEADER TEXT --- */}
+ 
         <div className="flex flex-col w-full justify-center items-center gap-3 sm:gap-4 px-2">
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold  max-w-[90%] leading-snug sm:leading-snug lg:leading-tight text-center">
             {data.bigtext}

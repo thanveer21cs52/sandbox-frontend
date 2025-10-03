@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Service from "../../../componets/services/service";
 import About from "../../../componets/About/About";
+import Contact from "../../../componets/contact/Contact";
+import Signinandout from "../../../componets/Auth/signinandout";
 
 async function Page({ params }:{params:any}) {
     const slug=(await params).slug
@@ -12,6 +14,15 @@ async function Page({ params }:{params:any}) {
       return <About/>
 
     }
+    else if(slug=="contact"){
+      return <Contact/>
+
+    }
+     else if(slug=="signin" || slug=="signup"){
+      return <Signinandout auth={slug=="signin" &&'signin'|| slug=="signup" &&'signup'||""}/>
+
+    }
+
     return notFound()
 
 }

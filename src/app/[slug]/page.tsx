@@ -33,6 +33,9 @@ export async function generateStaticParams() {
   return [
     { slug: "services" },
     { slug: "about" },
+    { slug: "contact" },
+    { slug: "signin" },
+    { slug: "signup" },
 
   ];
 }

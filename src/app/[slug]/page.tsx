@@ -5,6 +5,7 @@ import About from "../../../componets/About/About";
 import Contact from "../../../componets/contact/Contact";
 import Signinandout from "../../../componets/Auth/signinandout";
 import Job from "../../../componets/job/Job";
+import Shop from "../../../componets/shop/Shop";
 
 async function Page({ params }:{params:any}) {
     const slug=(await params).slug
@@ -28,6 +29,10 @@ async function Page({ params }:{params:any}) {
       return <Job/>
 
     }
+     else if(slug=="shop" ){
+      return <Shop/>
+
+    }
 
     return notFound()
 
@@ -43,6 +48,7 @@ export async function generateStaticParams() {
     { slug: "signin" },
     { slug: "signup" },
     { slug: "job" },
+    { slug: "Shop" },
 
   ];
 }

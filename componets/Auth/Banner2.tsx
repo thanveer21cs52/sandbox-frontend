@@ -3,22 +3,17 @@ import Progressbar from "../resuse/Progressbar";
 import Socialbar from "../resuse/Socialbar";
 
 async function Banner2({auth}:{auth:any}) {
-    const data1 = await fetchData(
-        `https://strapi-backend-dbhx.onrender.com/api/aboutpage?populate[aboutbanner2][populate]=*`
-    );
-    console.log(data1.aboutbanner2, "sd");
-    const data = data1.aboutbanner2;
+  const data1 = await fetchData(
+        "https://strapi-backend-dbhx.onrender.com/api/contact?populate[contactbanner2][populate]=*"
+      );
+      const data = await data1.contactbanner2;
     const colorMap: Record<string, string> = {
         red: "bg-red-400",
         blue: "bg-blue-400",
         green: "bg-green-400",
         orange: "bg-orange-400",
     }
-    const data2 = await fetchData(
-        `https://strapi-backend-dbhx.onrender.com/api/service?populate[servicebanner3][populate]=*`
-    );
-    console.log(data2.servicebanner3, "sd");
-    const data3 = data2.servicebanner3;
+
     
     return (
 
@@ -30,7 +25,7 @@ async function Banner2({auth}:{auth:any}) {
                         
                             <div className="hidden md:block">
                                 <img
-                                    src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
+                                    src={data[0].imgs[0].url}
                                     alt="Sign in illustration"
                                     className="h-full w-full object-cover"
                                 />

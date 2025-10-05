@@ -29,7 +29,7 @@ type IconName = typeof iconlist[number];
                       <div className="lg:basis-1/2 grid grid-cols-1 sm:grid-cols-2 justify-items-start content-end gap-3 sm:gap-4">
                         <div className="sm:row-span-2 w-full flex justify-end h-full my-4 sm:my-6">
                           <img
-                            src={data[0].imgs[0].url}
+                            src={data[0].imgs[1].url}
                             alt="bannerimg"
                             className="w-full h-[70vw] sm:h-[50vw] md:h-[40vw] lg:h-[70%] rounded-2xl object-cover"
                           />
@@ -46,7 +46,7 @@ type IconName = typeof iconlist[number];
             
                         <div className="w-full rounded-lg flex flex-col h-40 sm:h-40 md:h-44">
                           <img
-                            src={data[0].imgs[1].url}
+                            src={data[0].imgs[2].url}
                             alt="bannerimg"
                             className="w-full h-full rounded-2xl object-cover"
                           />

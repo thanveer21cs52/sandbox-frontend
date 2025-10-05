@@ -39,7 +39,7 @@ async function Banner2() {
           <p className="text-xl lg:text-2xl font-semibold  font-manrope  w-8/9 leading-8">
             {data.bigtext}
           </p>
-          <p className="text-xs  font-medium text-gray-500">
+          <p className="text-sm  font-medium text-gray-500">
             {data.smalltext}
           </p> 
           <div className="text-lg   font-medium grid grid-cols-1 lg:grid-cols-2 gap-3 text-gray-500 ">
@@ -52,7 +52,7 @@ async function Banner2() {
                     </div>
                   
                      <p
-                  className="text-xs text-light-base font-medium flex-11/12"
+                  className="text-sm text-light-base font-medium flex-11/12"
                  
                 >
                   {con.content}

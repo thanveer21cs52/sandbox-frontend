@@ -20,7 +20,7 @@ async function Banner8() {
           />
           <div className="flex flex-col justify-center items-center lg:flex-4/6 lg:w-full p-10 md:p-16">
             <div className="flex  flex-col justify-start items-start  flex-1/10   gap-5 text-dark-base  ">
-              <p className="text-2xl lg:text-4xl font-medium  font-serif   leading-8">
+              <p className="text-2xl lg:text-4xl font-medium  font-manrope   leading-8">
                 {data.textbig}
               </p>
               <p className="text-md lg:text-lg text-light-base font-medium md:w-6/7 font-sans">

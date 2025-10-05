@@ -107,7 +107,7 @@ export default function Jobbanner1() {
     fetchFromApi();
   }, []);
 
-  // 🩶 Skeleton UI while loading
+
   if (loading) {
     return (
       <section className="bg-[#f8faff] py-20">

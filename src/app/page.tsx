@@ -16,7 +16,7 @@ import Socialbar from "../../componets/resuse/Socialbar";
 export default function Home() {
   
   return (
-    <div className="min-h-screen scroll-smooth">
+    <div className="min-h-screen scroll-smooth font-manrope">
       
       <Banner1/>
       <Banner2/>

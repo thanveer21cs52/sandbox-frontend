@@ -42,7 +42,7 @@ async function Banner2({auth}:{auth:any}) {
                                     Welcome Back
                                 </h2>
                                 <p className="text-gray-600 mb-8">
-                                    Fill your email and password to sign in.
+                                    Fill your email and password to {auth=="signin"&&'Sign in' ||auth=="signup"&&'Sign up' ||"Sign in"}
                                 </p>
 
                                 <form className="space-y-5">

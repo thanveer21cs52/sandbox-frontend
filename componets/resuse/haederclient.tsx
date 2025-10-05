@@ -29,91 +29,98 @@ export default function HeaderClient({ logoUrl, nav, social }: HeaderClientProps
         </a>
 
         {/* Desktop Nav */}
-<nav className="hidden lg:flex items-center gap-6 text-xs sm:text-sm md:text-base font-medium md:font-semibold">
-    {nav.map((item, i) => {
-        if(i==0){
-            return null
-        }
-        else if (item === "Pages") {
-          const isOpen = openDropdown === "Pages";
+        <nav className="hidden lg:flex items-center gap-6 text-xs sm:text-sm md:text-base font-medium md:font-semibold">
+          {nav.map((item, i) => {
+            if (i == 0) {
+              return null
+            }
+            else if (item === "Pages") {
+              const isOpen = openDropdown === "Pages";
 
-          return (
-            <div key={i} className="relative">
-              <button
-                onClick={() => setOpenDropdown(isOpen ? null : "Pages")}
-                className="flex items-center gap-1 text-black hover:text-button-purple transition-colors"
-              >
-                {item}
-              <Icon name='downarr' className='text-sm text-purple-400'/>
-              </button>
+              return (
+                <div key={i} className="relative">
+                  <button
+                    onClick={() => setOpenDropdown(isOpen ? null : "Pages")}
+                    className="flex items-center gap-1 text-black hover:text-button-purple transition-colors"
+                  >
+                    {item}
+                    <Icon name='downarr' className='text-sm text-purple-400' />
+                  </button>
 
-              {isOpen && (
-                <div className="absolute left-0 mt-2 w-40 bg-white rounded shadow-lg z-50">
-                  <Link
-                    href="/about"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                    onClick={() => setOpenDropdown(null)}
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href="/services"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                    onClick={() => setOpenDropdown(null)}
-                  >
-                    Services
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                    onClick={() => setOpenDropdown(null)}
-                  >
-                    contact
-                  </Link>
+                  {isOpen && (
+                    <div className="absolute left-0 mt-2 w-40 bg-white rounded shadow-lg z-50">
                       <Link
-                    href="/"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                    onClick={() => setOpenDropdown(null)}
-                  >
-                    home
-                  </Link>
-                   <Link
-                    href="/signin"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                    onClick={() => setOpenDropdown(null)}
-                  >
-                    sign in
-                  </Link>
-                     <Link
-                    href="/signup"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                    onClick={() => setOpenDropdown(null)}
-                  >
-                    sign up
-                  </Link>
+                        href="/about"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        About
+                      </Link>
+                      <Link
+                        href="/services"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        Services
+                      </Link>
+                      <Link
+                        href="/contact"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        contact
+                      </Link>
+                      <Link
+                        href="/"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        home
+                      </Link>
+                      <Link
+                        href="/signin"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        sign in
+                      </Link>
+                      <Link
+                        href="/signup"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        sign up
+                      </Link>
+                      <Link
+                        href="/job"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                        onClick={() => setOpenDropdown(null)}
+                      >
+                        job
+                      </Link>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          );
-        }
+              );
+            }
 
-        // Normal links
-        return (
-          <Link
-            key={i}
-            href={`/`}
-            className="text-black hover:text-button-purple transition-colors flex gap-2 justify-center items-center"
-          >
-            <p>
-{item}
-            </p>
-            
-             <Icon name='downarr' className='text-sm text-purple-400'/>
-          </Link>
-        );
-      })}
-  
-</nav>
+            // Normal links
+            return (
+              <Link
+                key={i}
+                href={`/`}
+                className="text-black hover:text-button-purple transition-colors flex gap-2 justify-center items-center"
+              >
+                <p>
+                  {item}
+                </p>
+
+                <Icon name='downarr' className='text-sm text-purple-400' />
+              </Link>
+            );
+          })}
+
+        </nav>
 
         {/* Mobile Drawer Button + Social */}
         <div className="flex items-center gap-2 sm:gap-3">
@@ -188,11 +195,11 @@ export default function HeaderClient({ logoUrl, nav, social }: HeaderClientProps
                 <div className="px-4 sm:px-6 py-6 space-y-6 max-h-[80vh] overflow-y-auto">
                   <nav className="flex flex-col gap-4">
                     {nav.map((item, i) => {
-                        if(i==0){
-                            return null
-                           }
-                           
-                        else if (item === "Pages") {
+                      if (i == 0) {
+                        return null
+                      }
+
+                      else if (item === "Pages") {
                         const isDropdownOpen = openDropdown === "Pages";
                         return (
                           <div key={i} className="flex flex-col">
@@ -203,7 +210,7 @@ export default function HeaderClient({ logoUrl, nav, social }: HeaderClientProps
                               className="text-white text-lg flex justify-between items-center hover:text-button-purple transition-colors"
                             >
                               {item}
-                               <Icon name='downarr' className='text-sm text-purple-400'/>
+                              <Icon name='downarr' className='text-sm text-purple-400' />
                             </button>
 
                             {isDropdownOpen && (
@@ -222,34 +229,41 @@ export default function HeaderClient({ logoUrl, nav, social }: HeaderClientProps
                                 >
                                   services
                                 </Link>
-<Link
-                    href="/contact"
-                  className="text-white hover:text-button-purple"
+                                <Link
+                                  href="/contact"
+                                  className="text-white hover:text-button-purple"
                                   onClick={() => setIsOpen(false)}
-                  >
-                    contact
-                  </Link>
-                      <Link
-                    href="/"
-                   className="text-white hover:text-button-purple"
+                                >
+                                  contact
+                                </Link>
+                                <Link
+                                  href="/"
+                                  className="text-white hover:text-button-purple"
                                   onClick={() => setIsOpen(false)}
-                  >
-                    home
-                  </Link>
-                   <Link
-                    href="/signin"
-                   className="text-white hover:text-button-purple"
+                                >
+                                  home
+                                </Link>
+                                <Link
+                                  href="/signin"
+                                  className="text-white hover:text-button-purple"
                                   onClick={() => setIsOpen(false)}
-                  >
-                    sign in
-                  </Link>
-                     <Link
-                    href="/signup"
-                   className="text-white hover:text-button-purple"
+                                >
+                                  sign in
+                                </Link>
+                                <Link
+                                  href="/signup"
+                                  className="text-white hover:text-button-purple"
                                   onClick={() => setIsOpen(false)}
-                  >
-                    sign up
-                  </Link>
+                                >
+                                  sign up
+                                </Link>
+                                  <Link
+                                  href="/job"
+                                  className="text-white hover:text-button-purple"
+                                  onClick={() => setIsOpen(false)}
+                                >
+                                  job
+                                </Link>
                               </div>
                             )}
                           </div>
@@ -257,18 +271,18 @@ export default function HeaderClient({ logoUrl, nav, social }: HeaderClientProps
                       }
 
                       return (
-                     <Link
-            key={i}
-            href={`/`}
-            className="text-white text-lg flex justify-between items-center hover:text-button-purple transition-colors"
-            
-          >
-            <p>
-{item}
-            </p>
-            
-             <Icon name='downarr' className='text-sm text-purple-400'/>
-          </Link>
+                        <Link
+                          key={i}
+                          href={`/`}
+                          className="text-white text-lg flex justify-between items-center hover:text-button-purple transition-colors"
+
+                        >
+                          <p>
+                            {item}
+                          </p>
+
+                          <Icon name='downarr' className='text-sm text-purple-400' />
+                        </Link>
                       );
                     })}
                   </nav>

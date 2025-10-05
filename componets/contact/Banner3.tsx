@@ -1,13 +1,20 @@
-function Banner3() {
+import { fetchData } from "../../utils/fetch";
+
+
+async function Banner3() {
+   const data1 = await fetchData(
+          "https://strapi-backend-dbhx.onrender.com/api/contact?populate[contactbanner3][populate]=*"
+        );
+        const data = await data1.contactbanner3;
     return (
   
     <section className="bg-white py-16 px-4 sm:px-8 lg:px-20">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-          Drop Us a Line
+          {data.title}
         </h2>
         <p className="text-gray-500 mb-10">
-          Reach out to us from our contact form and we will get back to you shortly.
+           {data.text}
         </p>
       </div>
 
@@ -51,7 +58,7 @@ function Banner3() {
             type="submit"
             className="bg-blue-600 text-white font-medium px-8 py-3 rounded-full hover:bg-blue-700 transition"
           >
-            Send message
+            {data.button}
           </button>
           <p className="text-gray-500 text-sm mt-3">
             * These fields are required.

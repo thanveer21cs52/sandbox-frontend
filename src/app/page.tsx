@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import Image from "next/image";
 import Header from "../../componets/resuse/header";
 import Banner1 from "../../componets/Home/banner1";
@@ -34,3 +35,5 @@ export default function Home() {
 
   );
 }
+
+export const revalidate = 60;

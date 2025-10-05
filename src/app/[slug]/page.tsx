@@ -1,8 +1,10 @@
+export const dynamic = 'force-static';
 import { notFound } from "next/navigation";
 import Service from "../../../componets/services/service";
 import About from "../../../componets/About/About";
 import Contact from "../../../componets/contact/Contact";
 import Signinandout from "../../../componets/Auth/signinandout";
+import Job from "../../../componets/job/Job";
 
 async function Page({ params }:{params:any}) {
     const slug=(await params).slug
@@ -22,6 +24,10 @@ async function Page({ params }:{params:any}) {
       return <Signinandout auth={slug=="signin" &&'signin'|| slug=="signup" &&'signup'||""}/>
 
     }
+     else if(slug=="job" ){
+      return <Job/>
+
+    }
 
     return notFound()
 
@@ -36,6 +42,9 @@ export async function generateStaticParams() {
     { slug: "contact" },
     { slug: "signin" },
     { slug: "signup" },
+    { slug: "job" },
 
   ];
 }
+
+export const revalidate = 60;

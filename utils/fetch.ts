@@ -1,7 +1,8 @@
 // app/components/Header.tsx
 export async function fetchData(url: string) {
   const res = await fetch(url,{
-    next:{revalidate: 60}
+    cache:'force-cache',
+ 
   });
   const data = await res.json();
   return data.data;
